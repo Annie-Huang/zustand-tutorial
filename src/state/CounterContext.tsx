@@ -1,13 +1,16 @@
 import { createContext, type ReactNode, useContext, useState } from 'react';
 
-interface CounterContextType {
+// type CounterState = {
+type CounterContextType = {
+  // I think CounterContextType for me is better, don't want to create too many variables
   count: number;
   increment: () => void;
   decrement: () => void;
   reset: () => void;
-}
+};
 
-const CounterContext = createContext<CounterContextType | undefined>(undefined);
+// const CounterContext = createContext<CounterState | null>(null);
+const CounterContext = createContext<CounterContextType | null>(null);
 
 export const CounterProvider = ({ children }: { children: ReactNode }) => {
   const [count, setCount] = useState(0);
