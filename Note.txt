@@ -1,0 +1,7 @@
+Stop Using Context in React - Use This Instead (https://www.youtube.com/watch?v=ULS7LHNScHc)
+
+https://github.com/Annie-Huang/zustand-tutorial
+
+https://vite.dev/guide/
+=====================================================================
+
