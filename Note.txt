@@ -5,3 +5,29 @@ https://github.com/Annie-Huang/zustand-tutorial
 https://vite.dev/guide/
 =====================================================================
 
+PS C:\react> npm create vite@latest
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  zustand-tutorial
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  TypeScript + React Compiler
+│
+◇  Install with npm and start now?
+│  Yes
+│
+◇  Scaffolding project in C:\react\zustand-tutorial...
+│
+◇  Installing dependencies with npm...
+
+
+----------------------------------------
+
+
