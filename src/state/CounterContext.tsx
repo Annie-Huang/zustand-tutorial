@@ -26,6 +26,7 @@ export const CounterProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useCounter = () => {
   const value = useContext(CounterContext);
   if (value == null) {
