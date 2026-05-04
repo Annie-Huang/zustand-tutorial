@@ -30,6 +30,12 @@ PS C:\react> npm create vite@latest
 
 ----------------------------------------
 
+PS C:\react\zustand-tutorial> npm i zustand
+
+
+
+---------
+
 React context Key Considerations:
 Performance: Every component consuming a context will automatically re-render whenever the provider's value changes. It is often recommended to memoize context values to prevent unnecessary re-renders.
 Complexity: For very complex global state management, external libraries like Redux or Zustand may be more efficient than using Context alone.
