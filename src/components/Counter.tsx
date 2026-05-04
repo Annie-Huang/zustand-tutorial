@@ -1,9 +1,11 @@
 import { CounterProvider, useCounter } from '../state/CounterContext.tsx';
 import { useRef } from 'react';
 import { useFlash } from '../hooks/useFlash.tsx';
+import { useCounterStore } from '../state/useCounterStore.ts';
 
 const CounterDisplay = () => {
-  const { count } = useCounter();
+  // const { count } = useCounter();
+  const { count } = useCounterStore();
   const cardRef = useRef<HTMLDivElement>(null);
   const renders = useFlash(cardRef, count);
 
