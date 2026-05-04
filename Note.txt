@@ -35,3 +35,15 @@ Performance: Every component consuming a context will automatically re-render wh
 Complexity: For very complex global state management, external libraries like Redux or Zustand may be more efficient than using Context alone.
 Default Values: The defaultValue passed to createContext is only used if a component is rendered outside of a corresponding
 
+When you use context inside of React, every single time you access your context through
+that hook of useContext, or whatever custom hook you created, every time that context changes,
+no matter what changes in the context, even if you're not using it, it'll re-render every single
+component accessing that data.
+
+So in our case, When our count changes, our display obviously updates, but all of our controls
+(e.g <CountControls> component), which don't have anything to do with our display at all, are
+also re-rendering. This can lead to massive performance problems because if you have a context
+that's wrapping most of your application and you use it in lots of different places, it could cause your
+entire application to re-render every time even small minor pieces of data change that only affect
+1% of your application. Also, context in general just becomes hard to scale as your application
+grows in size. And this is where Zustand really comes in.
