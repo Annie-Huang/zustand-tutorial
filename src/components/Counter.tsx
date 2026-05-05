@@ -23,7 +23,8 @@ const incrementOutsideReact = (increment: () => void) => {
 };
 
 const CountControls = () => {
-  const { count, increment, decrement, reset } = useCounter();
+  // const { count, increment, decrement, reset } = useCounter();
+  const { count, increment, decrement, reset } = useCounterStore();
   const cardRef = useRef<HTMLDivElement>(null);
   const renders = useFlash(cardRef, count);
 
@@ -44,9 +45,11 @@ const CountControls = () => {
 
 export const Counter = () => {
   return (
-    <CounterProvider>
+    <>
+      {/*<CounterProvider>*/}
       <CounterDisplay />
       <CountControls />
-    </CounterProvider>
+      {/*</CounterProvider>*/}
+    </>
   );
 };
